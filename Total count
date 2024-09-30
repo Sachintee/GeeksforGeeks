@@ -1,0 +1,10 @@
+ // code here in c++
+          int sum=0;
+        for(auto i:arr)
+        {
+            sum+=i/k;
+            if(i%k) sum++;
+        }
+        return sum;
+    }
+};
