@@ -1,0 +1,35 @@
+// Your code here in C++
+
+                    vector<int> result;
+                    stack<Node*> s1, s2;
+                    Node *current1 = root1, *current2 = root2;
+
+                    while (current1 || !s1.empty() || current2 || !s2.empty()) {
+                              // Push all the left nodes of root1 to stack s1
+                              while (current1) {
+                                        s1.push(current1);
+                                        current1 = current1->left;
+                              }
+                              // Push all the left nodes of root2 to stack s2
+                              while (current2) {
+                                        s2.push(current2);
+                                        current2 = current2->left;
+                              }
+
+                              // Compare the top nodes of both stacks and add the smaller one to the result
+                              if (s2.empty() || (!s1.empty() && s1.top()->data <= s2.top()->data)) {
+                                        current1 = s1.top();
+                                        s1.pop();
+                                        result.push_back(current1->data);
+                                        current1 = current1->right;
+                              } else {
+                                        current2 = s2.top();
+                                        s2.pop();
+                                        result.push_back(current2->data);
+                                        current2 = current2->right;
+                              }
+                    }
+
+                    return result;
+          }
+};
