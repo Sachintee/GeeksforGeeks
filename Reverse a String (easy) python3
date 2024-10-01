@@ -1,0 +1,2 @@
+//code here in pyhton 
+return s[::-1]
