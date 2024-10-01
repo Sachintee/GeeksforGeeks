@@ -1,0 +1,2 @@
+//your code here in python 
+return n * (n + 1) // 2                      
