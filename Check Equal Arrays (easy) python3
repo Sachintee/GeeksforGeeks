@@ -1,0 +1,2 @@
+ //code here in python3
+return sorted(arr1) == sorted(arr2)
