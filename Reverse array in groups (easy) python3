@@ -1,0 +1,3 @@
+//code here in python
+               for i in range(0, len(arr), k):
+               arr[i:i+k] = arr[i:i+k][::-1]
